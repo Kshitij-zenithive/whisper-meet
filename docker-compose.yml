@@ -1,0 +1,15 @@
+
+
+services:
+  whisper-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: whisper-meet-whisper-server
+    ports:
+      - "8080:8080"  # Expose port 8080 for WebSocket communication
+    volumes:
+      - ./models:/app/models  # Mount the models directory for easy updates
+    environment:
+      - LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+    command: ["./whisper-server"]
