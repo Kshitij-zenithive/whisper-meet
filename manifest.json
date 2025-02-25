@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Live Meeting Transcription",
+  "version": "1.0.0",
+  "description": "Real-time transcription for Google Meet using Whisper",
+  "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+  },
+  "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+          "16": "icons/icon16.png",
+          "48": "icons/icon48.png",
+          "128": "icons/icon128.png"
+      }
+  },
+  
+  "content_scripts": [
+      {
+          "matches": ["https://meet.google.com/*"],
+          "js": ["content.js"],
+          "css": ["content.css"]
+      }
+  ],
+  "permissions": [
+      "storage",
+      "scripting",
+      "tabCapture"
+  ],
+  "host_permissions": [
+      "https://meet.google.com/*",
+      "ws://localhost:8080/*"
+  ],
+  "web_accessible_resources": [
+      {
+          "resources": ["icons/microphone.svg", "icons/close.svg"],
+          "matches": ["https://meet.google.com/*"]
+      }
+  ],
+  "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

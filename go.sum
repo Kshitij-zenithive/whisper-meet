@@ -1,0 +1,4 @@
+github.com/ggerganov/whisper.cpp/bindings/go v0.0.0-20250206073721-d682e150908e h1:/uXNNTHBuIFy3TNmg587218LCyP48HzQZAiz8Vswx6U=
+github.com/ggerganov/whisper.cpp/bindings/go v0.0.0-20250206073721-d682e150908e/go.mod h1:qyHjS/50ORo01H0NsuEEGsQR9VCtOcEye0gUl2sx1s8=
+github.com/gorilla/websocket v1.5.3 h1:saDtZ6Pbx/0u+bgYQ3q96pZgCzfhKXGPqt7kZ72aNNg=
+github.com/gorilla/websocket v1.5.3/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
